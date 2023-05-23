@@ -1,11 +1,16 @@
-// TweetQuote.js
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import './TweetQuote.css';
 
-function TweetQuote({ text, author, color }) {
+function TweetQuote({ text, author, backgroundColor }) {
   const tweetURL = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     `${text} - ${author}`
   )}`;
+
+  const tweetStyle = {
+    backgroundColor: backgroundColor,
+  };
 
   return (
     <a
@@ -13,9 +18,9 @@ function TweetQuote({ text, author, color }) {
       href={tweetURL}
       target="_blank"
       rel="noopener noreferrer"
-      style={{backgroundColor: color}}
+      style={tweetStyle}
     >
-      Tweet Quote
+      <FontAwesomeIcon icon={faTwitter} />
     </a>
   );
 }

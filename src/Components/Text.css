@@ -6,4 +6,6 @@
   text-transform: uppercase; /* Convierte el texto a mayúsculas */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Agrega una sombra al texto */
   letter-spacing: 2px; /* Aumenta el espaciado entre letras */
+  white-space: normal;
+  overflow: visible;
 }

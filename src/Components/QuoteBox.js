@@ -13,7 +13,10 @@ function QuoteBox() {
   const [backgroundColor, setBackgroundColor] = useState('#f5f5f5');
 
   const generateRandomColor = () => {
-    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    let randomColor;
+    do {
+      randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    } while (randomColor === '#FFFFFF');
     return randomColor;
   };
 
@@ -48,8 +51,10 @@ function QuoteBox() {
     <div id="quote-box">
       <Text text={quote.text} color={backgroundColor} />
       <Author author={quote.author} color={backgroundColor} />
-      <NewQuote onClick={handleNewQuote} color={backgroundColor} />
-      <TweetQuote text={quote.text} author={quote.author} color={backgroundColor} />
+      <div className="quote-buttons">
+        <NewQuote onClick={handleNewQuote} color={backgroundColor} />
+        <TweetQuote text={quote.text} author={quote.author} backgroundColor={backgroundColor} />
+      </div>
     </div>
   );
 }
