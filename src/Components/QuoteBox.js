@@ -1,3 +1,4 @@
+// QuoteBox.js
 import React, { useState, useEffect } from 'react';
 import Text from './Text';
 import Author from './Author';
@@ -10,7 +11,7 @@ function QuoteBox() {
     text: 'This is a sample quote.',
     author: 'Anonymous',
   });
-  const [backgroundColor, setBackgroundColor] = useState('#f5f5f5');
+  const [backgroundColor, setBackgroundColor] = useState('#3498db'); // Cambia el valor a azul
 
   const generateRandomColor = () => {
     let randomColor;

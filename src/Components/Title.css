@@ -1,0 +1,10 @@
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title img {
+  width: 100%;
+  max-width: 200px; /* Ajusta el tamaño de la imagen según tus necesidades */
+}

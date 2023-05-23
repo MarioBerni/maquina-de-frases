@@ -23,6 +23,6 @@
 .quote-buttons {
   display: flex;
   align-items: center;
-  gap: 10px; /* Ajusta el valor según la distancia deseada */
+  gap: 10px;
+  justify-content: space-between;
 }
-
