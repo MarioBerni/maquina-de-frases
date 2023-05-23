@@ -10,6 +10,12 @@ function QuoteBox() {
     text: 'This is a sample quote.',
     author: 'Anonymous',
   });
+  const [backgroundColor, setBackgroundColor] = useState('#f5f5f5');
+
+  const generateRandomColor = () => {
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+  };
 
   const fetchQuote = async () => {
     try {
@@ -30,18 +36,20 @@ function QuoteBox() {
 
   useEffect(() => {
     fetchQuote();
-  }, []);
+    document.body.style.backgroundColor = backgroundColor;
+  }, [backgroundColor]);
 
   const handleNewQuote = () => {
     fetchQuote();
+    setBackgroundColor(generateRandomColor());
   };
 
   return (
     <div id="quote-box">
-      <Text text={quote.text} />
-      <Author author={quote.author} />
-      <NewQuote onClick={handleNewQuote} />
-      <TweetQuote text={quote.text} author={quote.author} />
+      <Text text={quote.text} color={backgroundColor} />
+      <Author author={quote.author} color={backgroundColor} />
+      <NewQuote onClick={handleNewQuote} color={backgroundColor} />
+      <TweetQuote text={quote.text} author={quote.author} color={backgroundColor} />
     </div>
   );
 }

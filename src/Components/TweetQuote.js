@@ -1,7 +1,8 @@
+// TweetQuote.js
 import React from 'react';
 import './TweetQuote.css';
 
-function TweetQuote({ text, author }) {
+function TweetQuote({ text, author, color }) {
   const tweetURL = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     `${text} - ${author}`
   )}`;
@@ -12,6 +13,7 @@ function TweetQuote({ text, author }) {
       href={tweetURL}
       target="_blank"
       rel="noopener noreferrer"
+      style={{backgroundColor: color}}
     >
       Tweet Quote
     </a>

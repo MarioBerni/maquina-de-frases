@@ -3,13 +3,13 @@
 }
 
 #quote-box {
-  width: 80%;
-  max-width: 500px;
+  width: 95%;
   padding: 2em;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 @media (max-width: 768px) {

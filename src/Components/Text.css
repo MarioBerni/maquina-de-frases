@@ -2,4 +2,8 @@
   font-size: 20px;
   color: #333;
   margin-bottom: 10px;
+  font-family: 'Arial', sans-serif; /* Cambia la fuente a Arial o la que desees */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Agrega una sombra al texto */
+  letter-spacing: 2px; /* Aumenta el espaciado entre letras */
 }
