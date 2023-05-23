@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+#quote-box {
+  width: 80%;
+  max-width: 500px;
+  padding: 2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  #quote-box {
+    width: 90%;
+    padding: 1em;
+  }
+}
